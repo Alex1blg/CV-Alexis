@@ -1,0 +1,132 @@
+/*Debut général*/
+*{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: 30px;
+    height: 100vh;
+    background-color : rgb(71, 71, 71);
+    background-size : cover;    
+    font-family : calibri ;
+    color: white;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    height: 200px;
+}
+::-webkit-scrollbar-track{
+    background-color: #e7e6e6;
+}
+::-webkit-scrollbar-thumb{
+    background: #479ec8;
+    border-radius: 10px;
+}
+a{color: white;}
+
+
+/*Fin général*/
+
+
+/*Debut de navigation*/
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(101, 101, 101);
+    text-align: center;
+    border-radius: 10px;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    
+}
+.nav-bar li{
+    padding: 30px;
+    width: 75px;
+}
+.nav-bar #active{
+    background-color: #479ec8;
+    border-bottom: white 5px solid;
+}
+.nav-bar .last {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.name{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-left: 30px;
+    font-size: 3em;
+}
+.navigation li,.name:hover{cursor: pointer;}
+/*Fin de navigation*/
+
+
+
+/*Debut du loisir*/
+
+.loisir-section{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loisir{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loisir-section h3{
+    font-size: 3em;
+    margin: 100px;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1500px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1500px) rotateY(360deg);
+    }
+}
+.box span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*90deg)) translateZ(300px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #0004);
+}
+.box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.box span img:hover{
+    cursor: pointer;
+
+}
+/*Fin du loisir*/
